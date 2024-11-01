@@ -1,0 +1,14 @@
+{% extends "library/base.html" %}
+{% block title %}借阅者列表{% endblock %}
+
+{% block content %}
+<h2>借阅者</h2>
+<ul>
+    {% for borrower in borrowers %}
+        <li>
+            <strong>{{ borrower.name }}</strong><br>
+            联系方式: {{ borrower.contact }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

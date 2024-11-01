@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}图书管理系统{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'library/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="{% url 'book_list' %}">图书管理系统</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'book_list' %}">书籍</a></li>
+                <li><a href="{% url 'author_list' %}">作者</a></li>
+                <li><a href="{% url 'borrower_list' %}">借阅者</a></li>
+                <li><a href="{% url 'borrow_record_list' %}">借阅记录</a></li>
+            </ul>
+        </nav>
+        <hr>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

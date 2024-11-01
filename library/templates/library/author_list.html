@@ -1,0 +1,11 @@
+{% extends "library/base.html" %}
+{% block title %}作者列表{% endblock %}
+
+{% block content %}
+    <h2>作者</h2>
+    <ul>
+        {% for author in authors %}
+            <li>{{ author.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

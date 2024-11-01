@@ -1,0 +1,32 @@
+{% extends "library/base.html" %}
+{% block title %}借阅记录{% endblock %}
+
+{% block content %}
+<h2>借阅记录</h2>
+
+<!-- 添加借阅记录的链接 -->
+<a href="{% url 'borrow_record_add' %}" class="btn">添加借阅记录</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>书籍</th>
+            <th>借阅者</th>
+            <th>借阅日期</th>
+            <th>到期日期</th>
+            <th>归还日期</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in borrow_records %}
+            <tr>
+                <td>{{ record.book.title }}</td>
+                <td>{{ record.borrower.name }}</td>
+                <td>{{ record.borrow_date }}</td>
+                <td>{{ record.due_date }}</td>
+                <td>{{ record.return_date|default:"未归还" }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

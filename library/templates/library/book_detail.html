@@ -1,0 +1,11 @@
+{% extends "library/base.html" %}
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+    <h2>{{ book.title }}</h2>
+    <p>作者: {{ book.author.name }}</p>
+    <p>类别: {{ book.category }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
+    <p>出版日期: {{ book.published_date }}</p>
+    <a href="{% url 'book_list' %}">返回书籍列表</a>
+{% endblock %}

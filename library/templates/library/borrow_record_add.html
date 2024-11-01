@@ -1,0 +1,27 @@
+{% extends "library/base.html" %}
+{% block title %}添加借阅记录{% endblock %}
+
+{% block content %}
+<h2>添加借阅记录</h2>
+<form method="post">
+    {% csrf_token %}
+    
+    <label for="book">书籍:</label>
+    <select id="book" name="book" required>
+        <option value="">请选择书籍</option>
+        {% for book in books %}
+            <option value="{{ book.id }}">{{ book.title }}</option>
+        {% endfor %}
+    </select>
+
+    <!-- 将借阅者选择框改为输入框 -->
+    <label for="borrower">借阅者姓名:</label>
+    <input type="text" id="borrower" name="borrower" required>
+
+    <label for="due_date">到期日期:</label>
+    <input type="date" id="due_date" name="due_date" required>
+
+    <button type="submit">添加借阅记录</button>
+</form>
+<a href="{% url 'borrow_record_list' %}">返回借阅记录列表</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "library/base.html" %}
+{% block title %}添加新书籍{% endblock %}
+
+{% block content %}
+<h2>添加新书籍</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="title">书名:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="author">作者:</label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="category">类别:</label>
+    <input type="text" id="category" name="category">
+
+    <label for="isbn">ISBN:</label>
+    <input type="text" id="isbn" name="isbn" required>
+
+    <label for="published_date">出版日期:</label>
+    <input type="date" id="published_date" name="published_date">
+
+    <button type="submit">添加书籍</button>
+</form>
+<a href="{% url 'book_list' %}">返回书籍列表</a>
+{% endblock %}

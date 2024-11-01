@@ -1,0 +1,129 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-title a {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.navbar-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* 标题和按钮样式 */
+h1, h2 {
+    color: #ffb700;
+}
+
+a {
+    color: #ffb700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffb700;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: #ffb700;
+}
+
+/* 表格样式 */
+/* 导航栏和全局样式省略，保留表格和新增的表格悬停效果 */
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffb700;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #e9f5ff;
+}
+
+/* 按钮样式省略 */
+
+
+/* 表单样式 */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button, .btn {
+    cursor: pointer;
+}
